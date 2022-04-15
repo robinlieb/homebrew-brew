@@ -21,3 +21,9 @@ Install the latest available production release of [apple-music-jwt-generator](h
 ```
 $ brew install apple-music-jwt-generator
 ```
+
+Install the latest available production release of [input-source-manager-cli](https://github.com/robinlieb/input-source-manager-cli).
+
+```
+$ brew install input-source-manager-cli
+```
