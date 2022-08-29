@@ -5,21 +5,21 @@
 class ValidateCsv < Formula
   desc "CLI tool to validate CSV by duplicates and sums of rows."
   homepage "https://github.com/robinlieb/validate-csv"
-  version "1.2.0"
+  version "1.3.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/robinlieb/validate-csv/releases/download/v1.2.0/validate-csv_1.2.0_Darwin_x86_64.tar.gz"
-      sha256 "a8bfbea0e21c963cc9d027eb3c456bbb97e4fb210d6bead8b9b4bf4ab0a49265"
+      url "https://github.com/robinlieb/validate-csv/releases/download/v1.3.0/validate-csv_1.3.0_Darwin_x86_64.tar.gz"
+      sha256 "7355a50a7d702df045f0662fbe14971a5e3433044cb071e0a479157cab851e20"
 
       def install
         bin.install "validate-csv"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/robinlieb/validate-csv/releases/download/v1.2.0/validate-csv_1.2.0_Darwin_arm64.tar.gz"
-      sha256 "e686a460fb62ffd0c13cf78e79882ad7aedf94f014009f916d4d43f0d6d9d27b"
+      url "https://github.com/robinlieb/validate-csv/releases/download/v1.3.0/validate-csv_1.3.0_Darwin_arm64.tar.gz"
+      sha256 "77a89726ddf03aa6062aa80c621397f0511c4dc322eecc8a19588a0693c183b3"
 
       def install
         bin.install "validate-csv"
@@ -28,17 +28,17 @@ class ValidateCsv < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/robinlieb/validate-csv/releases/download/v1.2.0/validate-csv_1.2.0_Linux_arm64.tar.gz"
-      sha256 "e76c64fa946446180b70d735e2523235805b6a84ad163f9d70106eee8f2de66f"
+    if Hardware::CPU.intel?
+      url "https://github.com/robinlieb/validate-csv/releases/download/v1.3.0/validate-csv_1.3.0_Linux_x86_64.tar.gz"
+      sha256 "2e71fd49b71b8f38a85eca43906c375a11298597137d058cf5c60c9823c1207d"
 
       def install
         bin.install "validate-csv"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/robinlieb/validate-csv/releases/download/v1.2.0/validate-csv_1.2.0_Linux_x86_64.tar.gz"
-      sha256 "0b4eda9cb74258545b2d01762f58ccf412a969f7280cbf08855b1175c4b108b3"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/robinlieb/validate-csv/releases/download/v1.3.0/validate-csv_1.3.0_Linux_arm64.tar.gz"
+      sha256 "a118bdb92a9d820e9fbe60207ecebe7d86088ecba988f5dc7955e9a9e738ebe2"
 
       def install
         bin.install "validate-csv"
